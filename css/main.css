@@ -1,0 +1,92 @@
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 2px;
+}
+
+* {
+  font-family: arial, verdana, sans-serif;
+  font-size: 36pt;
+} /*universal class*/
+
+
+h1, .h2 {
+font-size: 55pt;}
+
+p {
+  text-align: justify;
+}
+
+
+.grid-container {
+  display: grid;
+  height: auto;
+  grid-template-rows: minmax (10px, auto);
+  grid-gap: 5px;
+  background-color: rgba(0, 0, 255, 0.945);
+  padding: 0;
+}
+
+.grid-container > div {
+  background-color: rgba(238, 26, 26, 0.8);
+  padding: 5px; 
+  font-size: 30px;
+}
+
+.image-left {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  display: absolute;
+  margin: 2px;
+  padding: 5px;
+  box-sizing:border-box;
+}  /*padding around the picture*/
+
+.image-left {
+  padding: 0px;
+  
+}
+
+.summary-right {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+}
+
+.skills-header {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  text-align: center;
+}
+
+.skillsleft, .skillsright {
+  grid-column:1 / span;
+  grid-row: 3;
+  text-align: center;
+}
+
+.boxleft, .boxright {
+  grid-column:1 / span;
+  grid-row: 4;
+  text-align: center;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  text-align: center;
+}
+
+@media screen and (max-width: 1007px) and (min-width: 600px) {
+  
+  .image-left {
+    width: 100%;
+  }
+  .grid-containers {
+    padding: 10px;
+  }
+}  /*the browser will not become smaller when it reaches 500px */
